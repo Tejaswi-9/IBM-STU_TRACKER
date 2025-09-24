@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="Intdesign.css">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <div>
+        <h1>Task Manager</h1>
+        <div class="small">Add, edit, complete & track progress </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="input-row">
+        <input id="taskInput" type="text" placeholder="Add a new task (press Enter or click Add)" aria-label="New task" />
+        <button id="addBtn" class="btn">Add</button>
+      </div>
+
+      <div class="meta">
+        <div class="progress-wrap">
+          <div class="progress" aria-hidden>
+            <i id="progressBar"></i>
+          </div>
+        </div>
+        <div class="counts" id="counts">0 / 0 completed</div>
+      </div>
+      
+      <div class="tasks" id="tasks"></div>
+      <footer>
+        <button id="clearCompleted" class="btn ghost">Clear Completed</button>
+        <button id="clearAll" class="btn ghost">Clear All</button>
+      </footer>
+    </section>
+
+  </div>
+  <script src="Intfunctioning.js"></script>
+</body>
+</html>

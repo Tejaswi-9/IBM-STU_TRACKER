@@ -1,0 +1,103 @@
+:root{
+  --bg: blanchedalmond;
+  --card: rgba(255, 255, 255, 0.8);
+  --accent: #2563eb;
+  --muted: #6b7280;
+  --success: #16a34a;
+}
+
+*{box-sizing:border-box;}
+
+body{
+  font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  margin:0;
+  background:var(--bg);
+  color:#111;
+}
+
+.app{
+  max-width:760px;
+  margin:36px auto;
+  padding:24px;
+}
+
+header{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+h1{margin:0;font-size:1.4rem;}
+
+.card{
+  background:var(--card);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.15);
+}
+
+.input-row{
+  display:flex;
+  gap:8px;
+  margin-top:14px;
+}
+
+.input-row input[type="text"]{
+  flex:1;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+  font-size:0.95rem;
+}
+
+.btn{
+  background:var(--accent);
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  border:0;
+  font-weight:600;
+  cursor:pointer;
+}
+
+.btn.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid rgba(37,99,235,0.12);
+}
+
+.meta{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:12px;
+  gap:12px;
+}
+
+.progress-wrap{flex:1;margin-right:12px;}
+.progress{height:12px;background:#eef2ff;border-radius:999px;overflow:hidden;}
+.progress > i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#7dd3fc);transition:width .35s ease;}
+.counts{font-size:0.9rem;color:var(--muted);}
+
+.tasks{margin-top:14px;display:grid;gap:10px;}
+.task{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  padding:10px;
+  border-radius:10px;
+  border:1px solid #f0f2f6;
+}
+.task.completed{opacity:0.7;background:linear-gradient(90deg, rgba(240,253,244,0.7), rgba(248,255,249,0.7));}
+.task .title{flex:1;}
+.task .title p{margin:0;font-size:0.95rem;}
+.task .title p.done{text-decoration:line-through;color:var(--muted);}
+.task .controls{display:flex;gap:8px;}
+
+.icon-btn{background:transparent;border:0;padding:6px;border-radius:8px;cursor:pointer;}
+.icon-btn:hover{background:#f3f4f6;}
+
+.small{font-size:0.85rem;color:var(--muted);}
+footer{margin-top:18px;display:flex;gap:8px;justify-content:flex-end;}
+
+@media (max-width:520px){.app{padding:14px}.input-row{flex-direction:column}.input-row input[type="text"]{width:100%;}}
